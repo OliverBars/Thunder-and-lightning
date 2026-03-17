@@ -1,0 +1,731 @@
+body {
+  background-color: #0e0e12;
+  color: #dedede;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ─── Buttons ────────────────────────────────────────────────────────────────── */
+.btn-primary {
+  display: inline-block;
+  padding: 16px 36px;
+  margin-bottom: 150px;
+  color: #1a1a1a;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+  background: linear-gradient(to bottom, #ffeb3b 0%, #fdd835 100%);
+  border-radius: 12px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 0 20px rgba(253, 216, 53, 0.4);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(to bottom, #fff176 0%, #fdd835 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 5px 25px rgba(253, 216, 53, 0.6);
+}
+
+.btn-primary:active {
+  transform: translateY(1px);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1), 0 0 10px rgba(253, 216, 53, 0.3);
+}
+
+/* ─── Header ─────────────────────────────────────────────────────────────────── */
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar {
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.navbar__list {
+  display: flex;
+  list-style: none;
+}
+
+.navbar__link {
+  color: inherit;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.navbar__logo {
+  color: inherit;
+  font-weight: 600;
+  font-size: 14.5px;
+}
+
+.navbar__item {
+  margin-left: 34px;
+}
+
+/* ─── Hero ───────────────────────────────────────────────────────────────────── */
+.hero__content {
+  padding-top: 60px;
+  background-image: url(/image/header-img.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 60px;
+}
+
+.hero__title {
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.7), 0 2px 4px rgba(0, 0, 0, 0.5);
+  margin: 0 0 25px;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.hero__subtitle {
+  font-weight: 500;
+  font-size: 14.5px;
+  margin-bottom: 25px;
+}
+
+.hero__description,
+.hero__info {
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.hero__description {
+  margin-bottom: 0;
+}
+
+.hero__info {
+  margin-bottom: 30px;
+}
+
+.hero__description span,
+.hero__info span {
+  color: #4dd2ff;
+}
+
+/* ─── Concerts ───────────────────────────────────────────────────────────────── */
+.concerts {
+  margin-bottom: 80px;
+}
+
+.concerts-block {
+  background-color: #1b1e29;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.concerts-title {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 18px 24px 16px;
+  border-bottom: 1px solid #252836;
+}
+
+.concerts-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.concerts-table thead tr {
+  background-color: #1b1e29;
+  border-bottom: 1px solid #252836;
+}
+
+.concerts-table thead th {
+  color: #888899;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: left;
+  padding: 12px 24px;
+}
+
+.concerts-table tbody tr {
+  background-color: #151821;
+  border-bottom: 1px solid #252836;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.concerts-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.concerts-table tbody tr:hover {
+  background-color: #151a24;
+  transform: translateX(3px);
+  box-shadow: inset 3px 0 0 #e8294a;
+}
+
+.concerts-table tbody td {
+  color: #ffffff;
+  font-size: 14px;
+  padding: 14px 24px;
+  vertical-align: middle;
+  transition: color 0.3s ease;
+}
+
+.concerts-table tbody td.venue {
+  font-weight: 500;
+}
+
+.concerts-table tbody td.seats,
+.concerts-table tbody td.datetime {
+  color: #ccccdd;
+}
+
+.concerts-table tbody td.action {
+  text-align: right;
+}
+
+.btn-ticket {
+  background-color: #e8294a;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.25s ease, transform 0.15s ease, box-shadow 0.25s ease;
+}
+
+.btn-ticket:hover {
+  background-color: #ff3355;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(232, 41, 74, 0.4);
+}
+
+.btn-ticket:active {
+  background-color: #cc2240;
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* ─── Team ───────────────────────────────────────────────────────────────────── */
+.team {
+  margin-bottom: 80px;
+}
+
+.team__title {
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.team__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  gap: 16px;
+}
+
+.team__card {
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #151821;
+  width: 260px;
+}
+
+.team__image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.team__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.team__card:hover .team__image img {
+  transform: scale(1.05);
+}
+
+.team__info {
+  padding: 11px;
+  background-color: #151821;
+}
+
+.team__name {
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* ─── History ────────────────────────────────────────────────────────────────── */
+.history {
+  padding: 10px 0 50px;
+  background: linear-gradient(135deg, #1a1d2e 0%, #0f1117 60%, #1a1520 100%);
+  position: relative;
+}
+
+.history::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  height: 60%;
+  background: radial-gradient(ellipse at bottom right, rgba(180, 20, 40, 0.25) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.history__title {
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 700;
+  padding-top: 30px;
+  margin-bottom: 24px;
+}
+
+.history__wrapper {
+  overflow: hidden;
+}
+
+.history__image {
+  float: right;
+  width: 380px;
+  height: 160px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.history__image img {
+  position: relative;
+  top: 15px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.history__text p {
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 1.7;
+  margin-bottom: 14px;
+  position: relative;
+  z-index: 10;
+}
+
+/* ─── Contacts ───────────────────────────────────────────────────────────────── */
+.contacts {
+  padding: 0 0 50px;
+  background: linear-gradient(135deg, #1a1520 0%, #0f1117 40%, #1a1d2e 100%);
+  position: relative;
+}
+
+.contacts::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
+  background: radial-gradient(ellipse at top left, rgba(180, 20, 40, 0.2) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.contacts__header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contacts__title {
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 700;
+  padding-top: 20px;
+  margin-bottom: 10px;
+}
+
+.contacts__subtitle {
+  color: #b0b3c1;
+  font-size: 14px;
+}
+
+.contacts__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+/* ─── Form ───────────────────────────────────────────────────────────────────── */
+.form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.form__label {
+  color: #b0b3c1;
+  font-size: 13px;
+}
+
+.form__input,
+.form__textarea {
+  background-color: #151821;
+  border: 1px solid #252836;
+  border-radius: 8px;
+  padding: 12px 14px;
+  color: #ffffff;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.25s ease;
+  font-family: inherit;
+}
+
+.form__input:focus,
+.form__textarea:focus {
+  border-color: #e8294a;
+}
+
+.form__textarea {
+  resize: vertical;
+  min-height: 130px;
+  margin-bottom: 20px;
+}
+
+.btn-submit {
+  background-color: #e8294a;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 28px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background-color 0.25s ease, transform 0.15s ease, box-shadow 0.25s ease;
+}
+
+.btn-submit:hover {
+  background-color: #ff3355;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(232, 41, 74, 0.4);
+}
+
+.btn-submit:active {
+  background-color: #cc2240;
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* ─── Map ────────────────────────────────────────────────────────────────────── */
+.contacts__map-container {
+  background-color: #151821;
+  border: 1px solid #252836;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.map__title {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.map__frame {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.map__frame iframe {
+  display: block;
+  border-radius: 8px;
+}
+
+/* ─── Footer ─────────────────────────────────────────────────────────────────── */
+.footer {
+  background-color: #0b0d10;
+  border-top: 1px solid #1e2030;
+  padding: 15px 0 20px;
+}
+
+.footer__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.footer__copy {
+  color: #b0b3c1;
+  font-size: 13px;
+  padding-bottom: 20px;
+}
+
+.footer__socials {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer__socials li:not(:last-child)::after {
+  content: "·";
+  color: #b0b3c1;
+  margin: 0 8px;
+}
+
+.footer__link,
+.footer__contact-link {
+  color: #b0b3c1;
+  font-size: 13px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer__link:hover,
+.footer__contact-link:hover {
+  color: #ffffff;
+}
+
+.footer__bottom {
+  display: flex;
+  align-items: center;
+}
+
+.footer__contacts {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer__divider {
+  color: #b0b3c1;
+  font-size: 13px;
+}
+
+/* ─── Popup ──────────────────────────────────────────────────────────────────── */
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.popup-overlay--visible {
+  opacity: 1;
+}
+
+.popup {
+  background: #1b1e29;
+  border: 1px solid #252836;
+  border-radius: 16px;
+  padding: 36px 32px;
+  max-width: 420px;
+  width: 90%;
+  text-align: center;
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+.popup-overlay--visible .popup {
+  transform: translateY(0);
+}
+
+.popup__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.popup__icon--success {
+  background: rgba(232, 41, 74, 0.15);
+  color: #e8294a;
+}
+
+.popup__icon--error {
+  background: rgba(255, 150, 0, 0.15);
+  color: #ff9600;
+}
+
+.popup__icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.popup__title {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.popup__message {
+  color: #b0b3c1;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.popup__close {
+  width: 100%;
+}
+
+/* ─── Form validation ────────────────────────────────────────────────────────── */
+.form__input--error {
+  border-color: #e8294a;
+}
+
+.form__error {
+  color: #e8294a;
+  font-size: 11px;
+  margin-top: 4px;
+}
+
+/* ─── Adaptive ───────────────────────────────────────────────────────────────── */
+@media (max-width: 860px) {
+  .team__card {
+    width: 100%;
+  }
+
+  .history__image {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .concerts-table thead {
+    display: none;
+  }
+
+  .concerts-table,
+  .concerts-table tbody,
+  .concerts-table tr,
+  .concerts-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .concerts-block {
+    text-align: center;
+  }
+
+  .concerts-title {
+    font-size: 15px;
+    padding: 14px 16px;
+  }
+
+  .concerts-table tbody tr {
+    padding: 12px 14px;
+    margin-bottom: 1px;
+  }
+
+  .concerts-table tbody td {
+    padding: 3px 0;
+    font-size: 12px;
+  }
+
+  .concerts-table tbody td.action {
+    text-align: center;
+    padding-top: 10px;
+  }
+
+  .btn-ticket {
+    font-size: 12px;
+    padding: 7px 14px;
+  }
+
+  .team__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team__card {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .contacts__wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .contacts__map-container {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .contacts__title {
+    font-size: 24px;
+  }
+
+  .btn-submit {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .footer__top {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .footer__copy {
+    padding: 10px;
+  }
+
+  .footer__bottom {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 520px) {
+  .navbar__list {
+    flex-wrap: wrap;
+    gap: 8px 16px;
+  }
+
+  .navbar__item {
+    margin-left: 0;
+  }
+
+  .form__row {
+    grid-template-columns: 1fr;
+  }
+
+  .contacts__title {
+    font-size: 20px;
+  }
+}
