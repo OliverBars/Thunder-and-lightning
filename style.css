@@ -47,7 +47,7 @@ body {
 }
 
 .navbar {
-  margin: 20px;
+  margin: 20px; 
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
