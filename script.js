@@ -1,4 +1,4 @@
-// ─── Smooth scroll для меню ───────────────────────────────────────────────────
+// ─── Smooth scroll for menu ───────────────────────────────────────────────────
 document.querySelectorAll('a[href^="#"]').forEach(link => {
   link.addEventListener('click', e => {
     const target = document.querySelector(link.getAttribute('href'));
@@ -25,7 +25,7 @@ function createPopup({ title, message, type = 'success' }) {
       <div class="popup__icon popup__icon--${type}">${icon}</div>
       <h3 class="popup__title">${title}</h3>
       <p class="popup__message">${message}</p>
-      <button class="popup__close btn-submit">Закрити</button>
+      <button class="popup__close btn-submit">Close</button>
     </div>
   `;
 
@@ -44,21 +44,21 @@ function createPopup({ title, message, type = 'success' }) {
   });
 }
 
-// ─── Кнопки "Замовити квиток" ─────────────────────────────────────────────────
+// ─── "Get a Ticket" buttons ───────────────────────────────────────────────────
 document.querySelectorAll('.btn-ticket').forEach(btn => {
   btn.addEventListener('click', () => {
     const row = btn.closest('tr');
     const venue = row.querySelector('.venue').textContent;
     const datetime = row.querySelector('.datetime').textContent;
     createPopup({
-      title: 'Квиток заброньовано!',
-      message: `📍 ${venue}<br>🗓 ${datetime}<br><br>Очікуйте підтвердження на email.`,
+      title: 'Ticket booked!',
+      message: `📍 ${venue}<br>🗓 ${datetime}<br><br>Please expect a confirmation email.`,
       type: 'success'
     });
   });
 });
 
-// ─── Кнопка "Замовити квиток" (hero) ─────────────────────────────────────────
+// ─── "Get a Ticket" button (hero) ─────────────────────────────────────────────
 const heroBtnPrimary = document.querySelector('.btn-primary');
 if (heroBtnPrimary) {
   heroBtnPrimary.addEventListener('click', e => {
@@ -68,7 +68,7 @@ if (heroBtnPrimary) {
   });
 }
 
-// ─── Форма + валідація + GET запит ───────────────────────────────────────────
+// ─── Form + validation + GET request ─────────────────────────────────────────
 const form = document.querySelector('.contacts__form');
 if (form) {
   const nameInput = form.querySelector('#name');
@@ -99,24 +99,24 @@ if (form) {
     let valid = true;
 
     if (!nameInput.value.trim() || nameInput.value.trim().length < 2) {
-      showError(nameInput, "Введіть ім'я (мінімум 2 символи)");
+      showError(nameInput, 'Please enter your name (at least 2 characters)');
       valid = false;
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(emailInput.value.trim())) {
-      showError(emailInput, 'Введіть коректний email');
+      showError(emailInput, 'Please enter a valid email address');
       valid = false;
     }
 
     if (!messageInput.value.trim() || messageInput.value.trim().length < 10) {
-      showError(messageInput, 'Повідомлення має бути не менше 10 символів');
+      showError(messageInput, 'Message must be at least 10 characters long');
       valid = false;
     }
 
     if (!valid) return;
 
-    // GET запит
+    // GET request
     const params = new URLSearchParams({
       name: nameInput.value.trim(),
       email: emailInput.value.trim(),
@@ -124,11 +124,11 @@ if (form) {
     });
 
     fetch(`?${params.toString()}`, { method: 'GET' })
-      .catch(() => {}); // ігноруємо помилку — сервера немає
+      .catch(() => {}); // ignore error — no server
 
     createPopup({
-      title: 'Повідомлення надіслано!',
-      message: `Дякуємо, ${nameInput.value.trim()}! Ми зв'яжемося з вами найближчим часом.`,
+      title: 'Message sent!',
+      message: `Thank you, ${nameInput.value.trim()}! We will get back to you shortly.`,
       type: 'success'
     });
 
